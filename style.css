@@ -1,0 +1,317 @@
+@charset "utf-8";
+/* ======== */
+/* =General Style= */
+/* ======== */
+
+* {
+	margin: 0;
+	padding: 0; 
+	box-sizing: border-box;
+}
+
+html {
+	font: normal 16px sans-serif;
+	color: #555;
+	scroll-behavior: smooth;
+}
+html a {
+	text-decoration: none;
+}
+
+body {
+	/*background-color: #966324;*/
+}
+
+/* ======== */
+/* =Header= */
+/* ======== */
+
+header {
+	/*background-color: white;*/
+	display: flex;
+	justify-content: space-between;
+	opacity: 0;
+	animation: 1s fadein .2s forwards;
+	/*position: fixed;
+	width: 100%;*/
+}
+
+header ul {
+	list-style: none;
+	margin-right: 20px;
+}
+
+header ul li, header ul li a {
+	float: left;
+	padding: 8px;
+	opacity: .9;
+}
+
+header * {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-family: "Quicksand" , sans-serif ;
+	font-weight: bold;
+}
+
+header ul li:hover {
+	background-color: grey;
+}
+header a img:hover {
+	background-color: grey;
+}
+
+header i {
+	margin-right: 6px;	
+}
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/* ============= */
+/* =Section(1)= */
+/* ======== ====*/
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-height: 100%;
+	width: 100%;
+	padding: 100px 50px;
+	color: white;
+}
+
+.hero *:not(.btn)  {
+	opacity: 0;
+	margin-top: 100px;
+	animation: 1s slidefade .3s forwards;
+}
+
+.hero h1 {
+	font-size: 64px!important;
+	font-family: "Quicksand" , sans-serif ;
+	margin-bottom: 50px;
+}
+
+.hero h1 i {
+	transform: rotate(30deg);
+}
+
+.hero p {
+	font-size: 30px!important;
+	font-family: "Quicksand" , sans-serif ;
+}
+
+.hero .btn {
+	align-self: flex-start;
+	margin: 60px 0 70px 0px;
+}
+
+.hero .btn a {
+	font-size: 20px!important;
+	font-family: "Quicksand" , sans-serif ;
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	background-color: grey;
+}
+
+.hero .btn a:hover {
+	background-color: black;
+}
+
+@keyframes slidefade {
+	100% {
+			margin-top: 0;
+			opacity: 1;
+		
+	}
+}
+
+/* ============= */
+/* =Social media bar= */
+/* ======== ====*/
+
+#smedia {
+	
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 0 ;
+	bottom: 0;
+
+	
+
+
+}
+
+#smedia a {
+	font-size:20px;
+	color: white;
+	transition: all .25s ease-out ;
+	padding: 10px;
+	background-color: #0a476d;
+}
+#smedia a:hover {
+	transform: scaleX(1.5); 
+	transform-origin: right;
+	color: white ;
+	background-color: #0a476d;
+	border-top-left-radius: 10px ;
+	border-bottom-left-radius: 10px;
+}
+
+/* ============= */
+/* =Section(2)= */
+/* ======== ====*/
+
+.container {
+	color: black;
+	align-items: center;
+}
+
+.container * {
+	text-align: center;
+}
+
+.container h1 {
+	text-transform: uppercase;
+	font-size: 40px!important;
+}
+
+.container h3 {
+	font-family: "Quicksand", sans-serif ;
+	margin-bottom: 50px;
+	font-size: 25px;
+}
+
+.container i {
+	font-size: 70px;
+	margin-bottom: 10px;
+}
+
+.table {
+	display: flex;
+
+}
+
+.container .table {
+	list-style: none;
+}
+
+.continer .table li {
+	float: left;
+}
+
+.container .table li div  {
+	text-align: center;
+}
+
+.container h2 {
+	margin: 20px;
+	font-family: "Quicksand" , sans-serif;
+}
+
+.table li div p {
+	font-size:20px!important; 
+	padding: 15px;
+}
+
+/* ============= */
+/* =Section(3)= */
+/* ======== ====*/
+
+.hero2 {
+	background-color: #f1f1f1!important;
+	display: flex;
+	padding: 50px;
+	min-height: 600px;
+}
+
+.hero2 .sec {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.hero2 .sec * {
+	padding: 10px;
+}
+
+.hero2 .img {
+	flex-basis: 50%;
+	background-size: cover;
+	background-position: center;
+	max-height: 394px;
+	background-image: url('assets/phone_buildings.jpg');
+	border-radius: 10px;
+}
+
+.hero2 .sec .btn2 a {
+	padding: 15px;
+	background-color: black;
+	color:white;
+	text-align: center;
+	
+}
+
+.btn2 {
+	margin-top: 20px;
+}
+
+.hero2 .sec h2,.hero2 .sec p {
+	font-family: "Quicksand" , sans-serif;
+	color:black;
+}
+
+/* ============= */
+/* =Section(4)= */
+/* ======== ====*/
+
+input {
+	font-family: "Quicksand" , sans-serif;
+	padding: 5px 300px 5px 2px;
+	margin: 10px;
+	text-align: left!important;
+	align-self: flex-start;
+	border-radius: 3px;
+	border: solid 2px black;
+}
+
+/* ============= */
+/* =Responsive Breakpoints= */
+/* ======== ====*/
+
+
+@media screen and (max-width: 700px) {
+	header {
+		flex-direction: column;
+		align-content: center;
+	}
+	header ul li, header ul li a {
+		float: none;
+		text-align: center;
+	}
+	.hero h1 {
+		font-size: 40px!important;
+	}
+	.table {
+		flex-direction: column;
+	}
+	header ul {
+		margin-right: 0px;
+	}
+	/*.hero2 {
+		flex-direction: column;	
+	}
+	.hero2 .img {
+		align-self: stretch;
+	}
+*/
+}
